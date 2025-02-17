@@ -4,18 +4,18 @@
 - - -
 ## 平台简介
 
-[![码云Gitee](https://gitee.com/dromara/RuoYi-Vue-Plus/badge/star.svg?theme=blue)](https://gitee.com/dromara/RuoYi-Vue-Plus)
-[![GitHub](https://img.shields.io/github/stars/dromara/RuoYi-Vue-Plus.svg?style=social&label=Stars)](https://github.com/dromara/RuoYi-Vue-Plus)
-[![Star](https://gitcode.com/dromara/RuoYi-Vue-Plus/star/badge.svg)](https://gitcode.com/dromara/RuoYi-Vue-Plus)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitee.com/dromara/RuoYi-Vue-Plus/blob/master/LICENSE)
-[![使用IntelliJ IDEA开发维护](https://img.shields.io/badge/IntelliJ%20IDEA-提供支持-blue.svg)](https://www.jetbrains.com/?from=RuoYi-Vue-Plus)
+[![码云Gitee](https://gitee.com/dromara/sycy/badge/star.svg?theme=blue)](https://gitee.com/dromara/sycy)
+[![GitHub](https://img.shields.io/github/stars/dromara/sycy.svg?style=social&label=Stars)](https://github.com/dromara/sycy)
+[![Star](https://gitcode.com/dromara/sycy/star/badge.svg)](https://gitcode.com/dromara/sycy)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitee.com/dromara/sycy/blob/master/LICENSE)
+[![使用IntelliJ IDEA开发维护](https://img.shields.io/badge/IntelliJ%20IDEA-提供支持-blue.svg)](https://www.jetbrains.com/?from=sycy)
 <br>
-[![RuoYi-Vue-Plus](https://img.shields.io/badge/RuoYi_Vue_Plus-5.3.0-success.svg)](https://gitee.com/dromara/RuoYi-Vue-Plus)
+[![sycy](https://img.shields.io/badge/RuoYi_Vue_Plus-5.3.0-success.svg)](https://gitee.com/dromara/sycy)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4-blue.svg)]()
 [![JDK-17](https://img.shields.io/badge/JDK-17-green.svg)]()
 [![JDK-21](https://img.shields.io/badge/JDK-21-green.svg)]()
 
-> Dromara RuoYi-Vue-Plus 是重写 RuoYi-Vue 针对 `分布式集群与多租户` 场景全方位升级(不兼容原框架)
+> Dromara sycy 是重写 RuoYi-Vue 针对 `分布式集群与多租户` 场景全方位升级(不兼容原框架)
 
 > 项目代码、文档 均开源免费可商用 遵循开源协议在项目中保留开源协议文件即可<br>
 活到老写到老 为兴趣而开源 为学习而开源 为让大家真正可以学到技术而开源
@@ -120,14 +120,14 @@ CCFlow 驰聘低代码-流程-表单 - https://gitee.com/opencc/RuoYi-JFlow <br>
 
 使用框架前请仔细阅读文档重点注意事项
 <br>
->[初始化项目 必看](https://plus-doc.dromara.org/#/ruoyi-vue-plus/quickstart/init)
->>[https://plus-doc.dromara.org/#/ruoyi-vue-plus/quickstart/init](https://plus-doc.dromara.org/#/ruoyi-vue-plus/quickstart/init)
+>[初始化项目 必看](https://plus-doc.dromara.org/#/sycy/quickstart/init)
+>>[https://plus-doc.dromara.org/#/sycy/quickstart/init](https://plus-doc.dromara.org/#/sycy/quickstart/init)
 >
 >[专栏与视频 入门必看](https://plus-doc.dromara.org/#/common/column)
 >>[https://plus-doc.dromara.org/#/common/column](https://plus-doc.dromara.org/#/common/column)
 >
->[部署项目 必看](https://plus-doc.dromara.org/#/ruoyi-vue-plus/quickstart/deploy)
->>[https://plus-doc.dromara.org/#/ruoyi-vue-plus/quickstart/deploy](https://plus-doc.dromara.org/#/ruoyi-vue-plus/quickstart/deploy)
+>[部署项目 必看](https://plus-doc.dromara.org/#/sycy/quickstart/deploy)
+>>[https://plus-doc.dromara.org/#/sycy/quickstart/deploy](https://plus-doc.dromara.org/#/sycy/quickstart/deploy)
 >
 >[如何加群](https://plus-doc.dromara.org/#/common/add_group)
 >>[https://plus-doc.dromara.org/#/common/add_group](https://plus-doc.dromara.org/#/common/add_group)

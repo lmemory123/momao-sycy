@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.momao</groupId>
-    <artifactId>ruoyi-vue-plus</artifactId>
+    <artifactId>sycy</artifactId>
     <version>${revision}</version>
 
-    <name>RuoYi-Vue-Plus</name>
-    <url>https://gitee.com/dromara/RuoYi-Vue-Plus</url>
-    <description>Dromara RuoYi-Vue-Plus多租户管理系统</description>
+    <name>森韵次元坞</name>
+    <url>https://gitee.com/dromara/sycy</url>
+    <description>momao project</description>
 
     <properties>
         <revision>5.3.0</revision>
@@ -140,7 +140,7 @@
             <!-- common 的依赖配置-->
             <dependency>
                 <groupId>com.momao</groupId>
-                <artifactId>ruoyi-common-bom</artifactId>
+                <artifactId>momao-common-bom</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -334,32 +334,32 @@
 
             <dependency>
                 <groupId>com.momao</groupId>
-                <artifactId>ruoyi-system</artifactId>
+                <artifactId>momao-system</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.momao</groupId>
-                <artifactId>ruoyi-job</artifactId>
+                <artifactId>momao-job</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.momao</groupId>
-                <artifactId>ruoyi-generator</artifactId>
+                <artifactId>momao-generator</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.momao</groupId>
-                <artifactId>ruoyi-demo</artifactId>
+                <artifactId>momao-demo</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <!--  工作流模块  -->
             <dependency>
                 <groupId>com.momao</groupId>
-                <artifactId>ruoyi-workflow</artifactId>
+                <artifactId>momao-workflow</artifactId>
                 <version>${revision}</version>
             </dependency>
 
@@ -367,10 +367,10 @@
     </dependencyManagement>
 
     <modules>
-        <module>ruoyi-admin</module>
-        <module>ruoyi-common</module>
-        <module>ruoyi-extend</module>
-        <module>ruoyi-modules</module>
+        <module>momao-admin</module>
+        <module>momao-common</module>
+        <module>momao-extend</module>
+        <module>momao-modules</module>
     </modules>
     <packaging>pom</packaging>
 

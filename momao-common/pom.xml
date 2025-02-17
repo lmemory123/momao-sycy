@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sycy</artifactId>
+        <groupId>com.momao</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>momao-common-bom</module>
+        <module>momao-common-social</module>
+        <module>momao-common-core</module>
+        <module>momao-common-doc</module>
+        <module>momao-common-excel</module>
+        <module>momao-common-idempotent</module>
+        <module>momao-common-job</module>
+        <module>momao-common-log</module>
+        <module>momao-common-mail</module>
+        <module>momao-common-mybatis</module>
+        <module>momao-common-oss</module>
+        <module>momao-common-ratelimiter</module>
+        <module>momao-common-redis</module>
+        <module>momao-common-satoken</module>
+        <module>momao-common-security</module>
+        <module>momao-common-sms</module>
+        <module>momao-common-web</module>
+        <module>momao-common-translation</module>
+        <module>momao-common-sensitive</module>
+        <module>momao-common-json</module>
+        <module>momao-common-encrypt</module>
+        <module>momao-common-tenant</module>
+        <module>momao-common-websocket</module>
+        <module>momao-common-sse</module>
+    </modules>
+
+    <artifactId>momao-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        common 通用模块
+    </description>
+
+</project>
