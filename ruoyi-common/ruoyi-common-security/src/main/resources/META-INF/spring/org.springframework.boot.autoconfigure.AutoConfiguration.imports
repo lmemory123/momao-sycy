@@ -1,2 +1,2 @@
-org.dromara.common.security.handler.AllUrlHandler
-org.dromara.common.security.config.SecurityConfig
+com.momao.common.security.handler.AllUrlHandler
+com.momao.common.security.config.SecurityConfig
