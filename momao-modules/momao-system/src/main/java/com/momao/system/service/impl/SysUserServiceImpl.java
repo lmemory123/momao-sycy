@@ -719,4 +719,17 @@ public class SysUserServiceImpl implements ISysUserService, UserService {
         return selectListByIds(new ArrayList<>(userIds));
     }
 
+    /**
+     * 通过用户email查询用户
+     *
+     * @param userId 用户id
+     * @return 用户
+     */
+    public SysUserVo selectUserByEmail(String account) {
+        LambdaQueryWrapper<SysUser> lqw = Wrappers.lambdaQuery();
+        lqw.eq(SysUser::getEmail, account);
+        return baseMapper.selectVoOne(lqw);
+
+    }
+
 }

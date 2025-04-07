@@ -371,6 +371,7 @@
         <module>momao-common</module>
         <module>momao-extend</module>
         <module>momao-modules</module>
+        <module>momao-sycy</module>
     </modules>
     <packaging>pom</packaging>
 

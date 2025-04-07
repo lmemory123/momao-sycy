@@ -45,4 +45,20 @@ public class LoginBody implements Serializable {
      */
     private String uuid;
 
+    /**
+     * 登录类型
+     */
+    private String loginType;
+
+    /**
+     * 账号类型
+     */
+    private String accountType;
+
+    /**
+     * 用户名
+     */
+    private String username;
+    
+
 }
