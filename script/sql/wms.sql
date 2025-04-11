@@ -400,3 +400,19 @@ create table wms_order_log (
     primary key (log_id)
 ) engine=innodb comment = '单据操作日志表';
 
+-- ----------------------------
+-- 17、SKU信息历史变更表 - 记录sku的历史变更 由于创建又创建人和删除的时候有最后删除有更新人，只记录修改了那些值
+-- ----------------------------
+create table bas_sku_history_log (
+     log_id          bigint(20)      not null                   comment '日志ID',
+     sku_id          bigint(20)      not null                   comment 'SKU ID',
+     snapshot        text            default null               comment 'SKU数据快照(JSON格式)',
+     operate_type    char(1)         not null                   comment '操作类型（1新增 2修改 3删除）',
+     operate_time    datetime        not null                   comment '操作时间',
+     operate_by      bigint(20)      not null                   comment '操作人ID',
+     operate_name    varchar(50)     default null               comment '操作人姓名',
+     operate_dept    bigint(20)      default null               comment '操作部门',
+     remark          varchar(500)    default null               comment '备注',
+     primary key (log_id),
+     index idx_sku_id (sku_id)
+) engine=innodb comment = 'SKU信息历史变更表';
