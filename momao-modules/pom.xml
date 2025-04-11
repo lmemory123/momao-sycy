@@ -15,6 +15,7 @@
         <module>momao-job</module>
         <module>momao-system</module>
         <module>momao-workflow</module>
+        <module>momao-wms</module>
     </modules>
 
     <artifactId>momao-modules</artifactId>

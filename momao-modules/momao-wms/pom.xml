@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.momao</groupId>
+        <artifactId>momao-modules</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>momao-wms</artifactId>
+
+    <name>momao-wms</name>
+    <description>wms模块</description>
+
+
+    <!-- 通用工具-->
+
+    <dependencies>
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-doc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-sms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-mail</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-idempotent</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-mybatis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-log</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-excel</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-ratelimiter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-translation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-sensitive</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-encrypt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-tenant</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.momao</groupId>
+            <artifactId>momao-common-websocket</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>
