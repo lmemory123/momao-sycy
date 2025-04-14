@@ -517,3 +517,28 @@ CREATE TABLE `sj_workflow_task_batch`
 ) ENGINE = InnoDB
   AUTO_INCREMENT = 0
   DEFAULT CHARSET = utf8mb4 COMMENT ='工作流批次';
+
+
+# table_Column
+CREATE TABLE `table_column` (
+`id`                int(11) unsigned   NOT NULL AUTO_INCREMENT COMMENT '主键',
+`table_name`        varchar(32)        NOT NULL COMMENT '表名称',
+`column_name`       varchar(32)        NOT NULL COMMENT '列字段名称',
+`column_type`       varchar(32)        NOT NULL DEFAULT 'string' COMMENT '列数据类型',
+`label`             varchar(32)        NOT NULL COMMENT '显示的表头名称',
+`width`             varchar(16)        DEFAULT NULL COMMENT '列宽度',
+`min_width`         varchar(16)        DEFAULT NULL COMMENT '最小列宽度',
+`fixed`             varchar(16)        DEFAULT NULL COMMENT '列是否固定(left/right)',
+`sortable`          tinyint(1)         DEFAULT 0 COMMENT '是否可排序(0-不可排序,1-可排序)',
+`show_overflow`     tinyint(1)         DEFAULT 1 COMMENT '当内容过长被隐藏时显示tooltip(0-不显示,1-显示)',
+`align`             varchar(8)         DEFAULT 'left' COMMENT '对齐方式(left/center/right)',
+`visible`           tinyint(1)         NOT NULL DEFAULT 1 COMMENT '是否显示(0-隐藏,1-显示)',
+`render_type`       varchar(16)        DEFAULT NULL COMMENT '渲染类型(tag/image/link等)',
+`sequence`          int(11)            DEFAULT 0 COMMENT '排序号',
+`remark`            varchar(256)       DEFAULT NULL COMMENT '备注',
+PRIMARY KEY (`id`),
+UNIQUE KEY `uk_table_column` (`table_name`, `column_name`),
+KEY `idx_table_name` (`table_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='表格列属性配置表';
+
+
