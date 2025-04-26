@@ -62,13 +62,13 @@ public class TableColumnVo implements Serializable {
      * 列宽度
      */
     @ExcelProperty(value = "列宽度")
-    private String width;
+    private Integer width;
 
     /**
      * 最小列宽度
      */
     @ExcelProperty(value = "最小列宽度")
-    private String minWidth;
+    private Integer minWidth;
 
     /**
      * 列是否固定(left/right)
@@ -117,6 +117,10 @@ public class TableColumnVo implements Serializable {
      */
     @ExcelProperty(value = "备注")
     private String remark;
+
+
+    // 用户id
+    private Long UserId;
 
 
 }

@@ -65,4 +65,20 @@ public interface ITableColumnService {
      * @return 是否删除成功
      */
     Boolean deleteWithValidByIds(Collection<Long> ids, Boolean isValid);
+
+    /**
+     *  获取用户自定义表头
+     * @param tableName 表名
+     * @return - 用户自定义表头列表
+     */
+    List<TableColumnVo> getUserColumns(String tableName);
+
+
+
+    /**
+     * 更新用户自定义表头
+     * @param columns
+     * @return
+     */
+    int updateUserColumns(List<TableColumnVo> columns);
 }

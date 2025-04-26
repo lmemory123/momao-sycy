@@ -101,12 +101,18 @@ public class BasSku extends BaseEntity {
     /**
      * 出库策略：过期后容忍出库的天数
      */
-    private Long outStrategyDays;
+    private Integer outStrategyDays;
+
+    /**
+     * 出库规则 0：先进先出 1：后进先出
+     */
+    private Integer outStrategyRule;
+
 
     /**
      * 入库策略：生产日期超过多少天不收
      */
-    private Long inStrategyDays;
+    private Integer inStrategyDays;
 
 
 }

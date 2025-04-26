@@ -23,7 +23,7 @@ import com.momao.system.service.ITableColumnService;
 import com.momao.common.mybatis.core.page.TableDataInfo;
 
 /**
- * 字段配置
+ * 表头配置
  *
  * @author Mo mao
  * @date 2025-04-14
@@ -37,7 +37,7 @@ public class TableColumnController extends BaseController {
     private final ITableColumnService tableColumnService;
 
     /**
-     * 查询字段配置列表
+     * 查询表头配置列表
      */
     @SaCheckPermission("system:column:list")
     @GetMapping("/list")
@@ -46,18 +46,18 @@ public class TableColumnController extends BaseController {
     }
 
     /**
-     * 导出字段配置列表
+     * 导出表头配置列表
      */
     @SaCheckPermission("system:column:export")
-    @Log(title = "字段配置", businessType = BusinessType.EXPORT)
+    @Log(title = "表头配置", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(TableColumnBo bo, HttpServletResponse response) {
         List<TableColumnVo> list = tableColumnService.queryList(bo);
-        ExcelUtil.exportExcel(list, "字段配置", TableColumnVo.class, response);
+        ExcelUtil.exportExcel(list, "表头配置", TableColumnVo.class, response);
     }
 
     /**
-     * 获取字段配置详细信息
+     * 获取表头配置详细信息
      *
      * @param id 主键
      */
@@ -72,7 +72,7 @@ public class TableColumnController extends BaseController {
      * 新增字段配置
      */
     @SaCheckPermission("system:column:add")
-    @Log(title = "字段配置", businessType = BusinessType.INSERT)
+    @Log(title = "表头配置", businessType = BusinessType.INSERT)
     @RepeatSubmit()
     @PostMapping()
     public R<Void> add(@Validated(AddGroup.class) @RequestBody TableColumnBo bo) {
@@ -83,7 +83,7 @@ public class TableColumnController extends BaseController {
      * 修改字段配置
      */
     @SaCheckPermission("system:column:edit")
-    @Log(title = "字段配置", businessType = BusinessType.UPDATE)
+    @Log(title = "表头配置", businessType = BusinessType.UPDATE)
     @RepeatSubmit()
     @PutMapping()
     public R<Void> edit(@Validated(EditGroup.class) @RequestBody TableColumnBo bo) {
@@ -91,15 +91,36 @@ public class TableColumnController extends BaseController {
     }
 
     /**
-     * 删除字段配置
+     * 删除表头配置
      *
      * @param ids 主键串
      */
     @SaCheckPermission("system:column:remove")
-    @Log(title = "字段配置", businessType = BusinessType.DELETE)
+    @Log(title = "表头配置", businessType = BusinessType.DELETE)
     @DeleteMapping("/{ids}")
     public R<Void> remove(@NotEmpty(message = "主键不能为空")
                           @PathVariable Long[] ids) {
         return toAjax(tableColumnService.deleteWithValidByIds(List.of(ids), true));
+    }
+
+    /**
+     * 获取用户级别表头配置
+     */
+    @GetMapping("/user")
+    public R<List<TableColumnVo>> getUserColumns(@RequestParam String tableName) {
+        return R.ok(tableColumnService.getUserColumns(tableName));
+    }
+
+    /**
+     * 更新用户级别表头配置
+     */
+    @Log(title = "用户表头配置", businessType = BusinessType.UPDATE)
+    @RepeatSubmit()
+    @PutMapping("/user")
+    public R<Void> updateUserColumns(@RequestBody List<TableColumnVo> columns) {
+        if (columns.isEmpty()){
+            return R.fail("表头配置不能为空");
+        }
+        return toAjax(tableColumnService.updateUserColumns(columns));
     }
 }

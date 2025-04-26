@@ -519,7 +519,7 @@ CREATE TABLE `sj_workflow_task_batch`
   DEFAULT CHARSET = utf8mb4 COMMENT ='工作流批次';
 
 
-# table_Column
+# table_Column 默认配置表
 CREATE TABLE `table_column` (
 `id`                int(11) unsigned   NOT NULL AUTO_INCREMENT COMMENT '主键',
 `table_name`        varchar(32)        NOT NULL COMMENT '表名称',
@@ -540,5 +540,21 @@ PRIMARY KEY (`id`),
 UNIQUE KEY `uk_table_column` (`table_name`, `column_name`),
 KEY `idx_table_name` (`table_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='表格列属性配置表';
+
+# table_Column_user_config 用户自定义配置表
+CREATE TABLE `table_column_user_config` (
+    `id`          int(11) unsigned   NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `user_id`     bigint(20)         NOT NULL COMMENT '用户ID',
+    `table_name`  varchar(32)        NOT NULL COMMENT '表名称',
+    `column_name` varchar(32)        NOT NULL COMMENT '列字段名称',
+    `width`       varchar(16)        DEFAULT NULL COMMENT '用户自定义列宽度',
+    `visible`     tinyint(1)         NOT NULL DEFAULT 1 COMMENT '用户自定义是否显示(0-隐藏,1-显示)',
+    `sequence`    int(11)            DEFAULT 0 COMMENT '用户自定义排序号',
+PRIMARY KEY (`id`),
+UNIQUE KEY `uk_user_table_column` (`user_id`, `table_name`, `column_name`),
+KEY `idx_user_table` (`user_id`, `table_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表格列属性配置表';
+
+
 
 

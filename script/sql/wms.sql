@@ -62,6 +62,7 @@ create table bas_sku (
     update_time     datetime                                   comment '更新时间',
     remark          varchar(500)    default null               comment '备注',
     out_strategy_days int DEFAULT 0                            COMMENT '出库策略：过期后容忍出库的天数' ,
+    out_strategy_rule int Default 0                            COMMENT '出库规则：（0先进先出，1）',
     in_strategy_days int DEFAULT 0                             COMMENT '入库策略：生产日期超过多少天不收',
     primary key (sku_id)
 ) engine=innodb comment = 'SKU信息表';

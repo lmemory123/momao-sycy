@@ -24,7 +24,7 @@ public class TableColumn implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "id")
+    @TableId(value = "id",type = IdType.AUTO)
     private Long id;
 
     /**
@@ -50,12 +50,12 @@ public class TableColumn implements Serializable {
     /**
      * 列宽度
      */
-    private String width;
+    private Integer width;
 
     /**
      * 最小列宽度
      */
-    private String minWidth;
+    private Integer minWidth;
 
     /**
      * 列是否固定(left/right)

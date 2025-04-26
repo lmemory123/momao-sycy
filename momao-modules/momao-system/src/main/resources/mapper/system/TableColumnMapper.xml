@@ -4,4 +4,30 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.momao.system.mapper.TableColumnMapper">
 
+    <select id="selectUserColumns" resultType="com.momao.system.domain.vo.TableColumnVo">
+        select ifnull(tcu.id, tc.id) as id,
+               tc.table_name,
+               tc.column_name,
+               tc.column_type,
+               tc.label,
+               ifnull(tcu.width, tc.width)       as width,
+               tc.min_width,
+               tc.fixed,
+               tc.sortable,
+               tc.show_overflow,
+               tc.align,
+               ifnull(tcu.visible, tc.visible)   as visible,
+               tc.render_type,
+               ifnull(tcu.sequence, tc.sequence) as sequence,
+               tc.remark,
+               tcu.user_id
+
+        from table_column tc
+                 left join table_column_user_config tcu
+                           on tc.table_name = tcu.table_name
+                               and tc.column_name = tcu.column_name
+                               and tcu.user_id = #{userId}
+        where tc.table_name = #{tableName}
+        group by tc.table_name, tc.column_name
+    </select>
 </mapper>
